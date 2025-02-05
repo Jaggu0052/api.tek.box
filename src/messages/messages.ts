@@ -43,3 +43,10 @@ export const TASKS_NOT_FOUND = `Task's not found!`;
 export const TASK_UPDATED_ERROR = 'Error updating task details!';
 export const TASK_DETAILS_FATCHED_ERROR = `Error fetching task's details!`;
 export const TASK_BY_ID_ERROR = 'Error fetching task details!';
+
+/* Project */
+export const PROJECT_SAVED_SUCCESS = 'Task created successfully!';
+export const PROJECTS_NOT_FOUND = `Project's not found!`;
+export const PROJECT_UPDATED_ERROR = 'Error updating Project details!';
+export const PROJECT_DETAILS_FATCHED_ERROR = `Error fetching Project's details!`;
+export const PROJECT_BY_ID_ERROR = 'Error fetching task details!';
