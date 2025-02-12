@@ -15,7 +15,7 @@ import { UserProfileService } from './user-profile.service';
 import { emailsend } from 'src/schema-validations/email';
 import * as SibApiV3Sdk from '@sendinblue/client';
 import time_out from '../email-templates/time-out';
-import * as moment from 'moment';
+import moment from 'moment';
 import { MyLoggerService } from 'src/my-loggers/my-loggers.service';
 import { responseObj } from '../types/data.types';
 import { v4 as uuidv4 } from 'uuid';
