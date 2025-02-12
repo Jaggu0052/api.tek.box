@@ -15,7 +15,7 @@ import { UserProfileService } from './user-profile.service';
 import { emailsend } from 'src/schema-validations/email';
 import * as SibApiV3Sdk from '@sendinblue/client';
 import time_out from '../email-templates/time-out';
-import moment from 'moment';
+import { format } from 'date-fns';
 import { MyLoggerService } from 'src/my-loggers/my-loggers.service';
 import { responseObj } from '../types/data.types';
 import { v4 as uuidv4 } from 'uuid';
@@ -183,8 +183,9 @@ export class UserProfileController {
   @Post('send-email')
   async sendEmail(@Body() emailSend: emailsend, @Res() res) {
     try {
-      const Today = new Date();
-      const date :any  = moment(Today)?.format('DD-MM-YYYY HH:mm:ss');
+      const Today: Date = new Date();
+      const date: string = format(Today, 'dd-MM-yyyy HH:mm:ss');
+      console.log(date);
       const apiKey: string = process.env.EMAIL_API_KEY;
       this.html = time_out;
       this.html = this.html.replace('%%name%%', emailSend.name);
