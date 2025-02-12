@@ -184,7 +184,7 @@ export class UserProfileController {
   async sendEmail(@Body() emailSend: emailsend, @Res() res) {
     try {
       const Today = new Date();
-      const date = moment(Today).format('DD-MM-YYYY HH:mm:ss');
+      const date :any  = moment(Today)?.format('DD-MM-YYYY HH:mm:ss');
       const apiKey: string = process.env.EMAIL_API_KEY;
       this.html = time_out;
       this.html = this.html.replace('%%name%%', emailSend.name);
