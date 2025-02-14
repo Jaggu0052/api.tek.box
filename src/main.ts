@@ -28,6 +28,7 @@ async function bootstrap() {
     //     console.log(`Ingress established at: ${listener.url()}`),
     //   );
     app.listen(PORT);
+  console.log("123 port running")
     // const url = await ngrok.connect({
     //   addr: PORT,
     //   authtoken_from_env: true,
